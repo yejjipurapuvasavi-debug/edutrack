@@ -176,6 +176,8 @@ def report(student_id):
     if not s:return redirect(url_for("dashboard"))
     return render_template("report.html",s=s)
 
-if __name__=="__main__":
-    init_db()
-    app.run(debug=True)
+# Initialize database when the application starts
+init_db()
+
+if __name__ == "__main__":
+    app.run(debug=False)
